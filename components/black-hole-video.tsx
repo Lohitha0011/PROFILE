@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export function BlackHoleVideo() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -22,14 +22,9 @@ export function BlackHoleVideo() {
       transition={{ duration: 1 }}
       className="fixed inset-0 overflow-hidden z-[-2] pointer-events-none"
     >
-      <video
-        src="/blackhole.webm"
-        className="absolute rotate-180 top-[-340px] left-0 w-[700px] h-[670px] lg:w-full lg:h-[700px] object-cover overflow-hidden opacity-70"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <div className="w-full h-full bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-black/40 flex items-center justify-center">
+          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 animate-pulse opacity-60"></div>
+        </div>
     </motion.div>
   );
 }
