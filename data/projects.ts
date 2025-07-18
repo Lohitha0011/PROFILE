@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ],
     image: "/images/alumni pic.jpg",
     github: "", // Add your GitHub link if available
-    featured: false
+    featured: true
   },
   {
     id: "face-emotion-detection",
